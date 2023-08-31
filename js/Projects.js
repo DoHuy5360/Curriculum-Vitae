@@ -14,6 +14,7 @@ class Function {
             <img
                 src="${this.logo}"
                 class="function_icon"
+				draggable="false"
             />
             <p class="function_content">${this.name}</p>
         </div>
@@ -54,6 +55,7 @@ class Project {
                     <img
                         class="logo"
                         src="${this.logo}"
+						draggable="false"
                     />
                     <p class="name">${this.name}</p>
                 </div>
@@ -158,7 +160,10 @@ const arrProjects = [
 		"Git, Github"
 	),
 ];
+
 const project = document.querySelector(".projects");
-arrProjects.forEach((p) => {
-	project.insertAdjacentHTML("beforeend", p.getHtml());
-});
+setTimeout(()=>{
+	arrProjects.forEach((p) => {
+		project.insertAdjacentHTML("beforeend", p.getHtml());
+	});
+}, 500)

@@ -60,6 +60,9 @@ const arrInfo = [
 ];
 
 const contact = document.querySelector(".contact");
-arrInfo.forEach((infor) => {
-	contact.insertAdjacentHTML("beforeend", infor.getHtml());
-});
+
+setTimeout(()=>{
+	arrInfo.forEach((infor) => {
+		contact.insertAdjacentHTML("beforeend", infor.getHtml());
+	});
+}, 500)

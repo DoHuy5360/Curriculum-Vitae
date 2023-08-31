@@ -11,7 +11,8 @@ class Skill {
 					<img
 						class="skill_icon"
 						src="${this.logo}"
-					new S>
+						draggable="false"
+					/>
 					<p class="skill_content">${this.name}</p>
 				</div>`;
 	}
@@ -41,6 +42,8 @@ const arrSkills = [
 	new Skill("ChakraUI", srcSkillimgs.get("chakra.png")),
 ];
 const skillGroup = document.querySelector(".skills_group");
-arrSkills.forEach((skillInfo) => {
-	skillGroup.insertAdjacentHTML("beforeend", skillInfo.getHtml());
-});
+setTimeout(()=>{
+	arrSkills.forEach((skillInfo) => {
+		skillGroup.insertAdjacentHTML("beforeend", skillInfo.getHtml());
+	});
+}, 500)

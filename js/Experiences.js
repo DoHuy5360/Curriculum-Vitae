@@ -55,6 +55,8 @@ const arrExperiences = [
 	),
 ];
 const experience = document.querySelector(".experiences");
-arrExperiences.forEach((ex) => {
-	experience.insertAdjacentHTML("beforeend", ex.getHtml());
-});
+setTimeout(()=>{
+	arrExperiences.forEach((ex) => {
+		experience.insertAdjacentHTML("beforeend", ex.getHtml());
+	});
+}, 500)
