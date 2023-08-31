@@ -1,7 +1,7 @@
 import Image from "../utils/Image.js";
 
-const srcFuncImgs = new Image("../imgs/functions");
-const srcProjImgs = new Image("../imgs/projects");
+const srcFuncImgs = new Image("./imgs/functions");
+const srcProjImgs = new Image("./imgs/projects");
 
 class Function {
 	constructor(logo, name) {
@@ -117,14 +117,14 @@ const arrProjects = [
 	),
 	new Project(
 		srcProjImgs.get("raptor-transformed.png"),
-		"Todo Task [Todo] - 11/2022 - 12/2022",
+		"Todo Task [ Todo ] - 11/2022 - 12/2022",
 		"Building and developing a todo application. The task can be dragged and dropped by user. Includes several functions:",
 		[
 			new Function(srcFuncImgs.get("planing.png"), "Planning"),
 			new Function(srcFuncImgs.get("drag-and-drop.png"), "Dragging & Dropping"),
 		],
 		[
-			new Link("Public:", "https://todo-task.com", "https://todo-task-fe.vercel.app/"),
+			new Link("Public:", "https://todo-task-fe.vercel.app", "https://todo-task-fe.vercel.app/"),
 			new Link(
 				"Source:",
 				"github.com/DoHuy5360/todo-task",

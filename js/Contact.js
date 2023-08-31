@@ -1,3 +1,6 @@
+import Image from "../utils/Image.js";
+const srcContactImgs = new Image("./imgs/contacts")
+
 class ViewContact{
 	constructor(name, logo) {
 		this.name = name;
@@ -35,23 +38,23 @@ class LinkContact extends ViewContact {
 const arrInfo = [
 	new ViewContact(
 		"dohuy.200276@gmail.com",
-		"https://res.cloudinary.com/dy57fdikk/image/upload/v1692856092/developer-blog-default/mail_ygh9hu.svg"
+		srcContactImgs.get("mail.svg")
 	),
 	new ViewContact(
 		"Binh Chanh - TP.HCM",
-		"https://res.cloudinary.com/dy57fdikk/image/upload/v1692856092/developer-blog-default/home_zyuspt.svg"
+		srcContactImgs.get("home.svg")
 	),
 	new ViewContact(
 		"0963758993",
-		"https://res.cloudinary.com/dy57fdikk/image/upload/v1692856092/developer-blog-default/phone_nnpfx9.svg"
+		srcContactImgs.get("phone.svg")
 	),
 	new ViewContact(
 		"17/08/2002",
-		"https://res.cloudinary.com/dy57fdikk/image/upload/v1692856092/developer-blog-default/birthday-cake_ud7wiz.svg"
+		srcContactImgs.get("birthday.svg")
 	),
 	new LinkContact(
 		"github.com/DoHuy5360",
-		"https://res.cloudinary.com/dy57fdikk/image/upload/v1692856092/developer-blog-default/link_qhyjec.svg",
+		srcContactImgs.get("link.svg"),
 		"https://github.com/DoHuy5360"
 	),
 ];
