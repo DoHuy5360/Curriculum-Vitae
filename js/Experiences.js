@@ -30,16 +30,16 @@ class Experience {
 }
 const arrExperiences = [
 	new Experience(
-		"Back-end Developer [ Internship ]",
+		"Technical leader",
 		"May 2023 - July 2023",
 		"Urban Corporation",
 		"Do the tasks below for web admin and web client of Urban Corporation:",
 		[
+			"Organize and mangage a team of 9 members.",
 			"Discuss with the customer that the function wants to develop.",
 			"Feature analysis needs to be developed with team members.",
-			"Database design.",
+			"Design project architecture and implement database, APIs, security,...",
 			"Incorporates the front-end team that defines the APIs.",
-			"Write APIs.",
 			"Combine the testers to test the APIs.",
 		]
 	),
@@ -55,6 +55,8 @@ const arrExperiences = [
 	),
 ];
 const experience = document.querySelector(".experiences");
-arrExperiences.forEach((ex) => {
-	experience.insertAdjacentHTML("beforeend", ex.getHtml());
-});
+setTimeout(()=>{
+	arrExperiences.forEach((ex) => {
+		experience.insertAdjacentHTML("beforeend", ex.getHtml());
+	});
+}, 500)

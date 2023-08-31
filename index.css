@@ -22,6 +22,7 @@
 body {
 	overflow-y: scroll;
 	overflow-x: hidden;
+	background-color: rgb(216, 216, 216);
 }
 /* CSS */
 .page {
@@ -32,6 +33,7 @@ body {
 	position: relative;
 	background-color: rgb(216, 216, 216);
 	padding: 25px;
+	height: 100%;
 }
 
 .info {
@@ -55,7 +57,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: calc(var(--gap-element) + 10px);
-	transition: 500ms ease-in-out;
+	position: relative;
 }
 
 .header {
@@ -63,6 +65,7 @@ body {
 	gap: var(--gap-element);
 	align-items: self-end;
 	height: 110px;
+	position: relative;
 }
 .position_apply {
 	display: flex;
@@ -145,7 +148,11 @@ body {
 	justify-content: center;
 	gap: var(--gap-element);
 }
-
+.wrap_skill{
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-element);
+}
 .body .part .content .skills .skills_group .skill {
 	display: flex;
 	flex-direction: row;
@@ -153,6 +160,8 @@ body {
 	padding: 5px;
 	border-radius: 5px;
 	border: 1px solid gainsboro;
+	user-select: none;
+	cursor: pointer;
 }
 
 .body .part .content .skills .skills_group .skill .skill_icon {
@@ -242,6 +251,7 @@ body {
 	padding: 5px;
 	border-radius: 5px;
 	border: 1px solid gainsboro;
+	user-select: none;
 }
 
 .body
@@ -257,18 +267,6 @@ body {
 	padding-right: 5px;
 }
 .body
-	.part
-	.content
-	.projects
-	.project
-	.description
-	.description_functions
-	.function
-	.body
-	.part
-	.content
-	.projects
-	.project
 	.addresses {
 	display: flex;
 	flex-direction: column;
@@ -323,6 +321,61 @@ body {
 
 .body .part .content .educations .education .school {
 	font-weight: bold;
+}
+.overflow_hidden{
+	position: relative;
+	overflow: hidden;
+}
+.back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: -1;
+	animation: holder 1500ms ease-in-out;
+}
+
+.move {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background-color: #b7cadb;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	transform: translateX(-100%);
+	animation: move 1500ms ease-in-out;
+}
+@keyframes move {
+	0% {
+		transform: translateX(-100%);
+	}
+	10%{
+		transform: translateX(0%);
+	}
+	90%{
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+@keyframes holder {
+	0% {
+		background-color: white;
+		z-index: 1;
+	}
+	10%{
+		background-color: white;
+	}
+	90%{
+		background-color: white;
+	}
+	100%{
+		background-color: transparent;
+		z-index: 1;
+	}
 }
 
 @media (min-width: 740px) and (max-width: 800px) {

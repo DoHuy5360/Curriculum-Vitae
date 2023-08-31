@@ -20,6 +20,8 @@ const arrEducaton = [
     new Education("Information Technology [ Software]","Van Lang University", "2020 - 2024")
 ]
 const education = document.querySelector(".educations")
-arrEducaton.forEach(edu =>{
-    education.insertAdjacentHTML("beforeend",edu.getHtml())
-})
+setTimeout(()=>{
+    arrEducaton.forEach(edu =>{
+        education.insertAdjacentHTML("beforeend",edu.getHtml())
+    })
+}, 500)
